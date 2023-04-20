@@ -136,7 +136,7 @@ ul {
 .menu-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   display: block;
@@ -213,7 +213,8 @@ ul {
   border: none;
   margin-right: auto;
   margin-left: auto;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-family: inherit;
   font-weight: 500;
@@ -382,7 +383,7 @@ ul {
   height: 100%;
   background-color: var(--icon-color-backgraund);
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -421,7 +422,8 @@ ul {
   width: 168px;
   height: 88px;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--border-customers-color);
   color: var(--customers-icon-color);
   color: var(--customers-color);
@@ -434,6 +436,7 @@ ul {
 }
 .customers-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link .customers-icon:hover,
 .clients-link .customers-icon:focus {
@@ -509,7 +512,7 @@ ul {
   height: 40px;
   background-color: var(--fotter-icons-color);
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -556,7 +559,10 @@ ul {
   color: var(--base-btn-clr);
   background-color: var(--third-color);
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -620,14 +626,10 @@ ul {
   border: 1px solid var(--border);
   border-top: none;
 }
-/* .portfolio-card:hover,
-.portfolio-card:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
+
 .card-list {
   display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-list:hover,
 .card-list:focus {
@@ -644,7 +646,7 @@ ul {
   height: 100%;
   z-index: var(--modal-idx);
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) visibility 250ms,
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity 250ms,
     cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
