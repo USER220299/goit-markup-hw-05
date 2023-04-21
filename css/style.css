@@ -27,6 +27,8 @@
   --modal-idx: 10;
   --modal-color: #fcfcfc;
   --modal-btn-hero: #e7e9fc;
+  --modal-icon: #2e2f42;
+  --modal-icon-hover-backraund: #404bbf;
 }
 body {
   font-family: var(--font-family);
@@ -149,9 +151,7 @@ ul {
   color: var(--secondary-btn-clr);
 }
 
-.menu-link.active::after,
-.menu-link:hover::after,
-.menu-link:focus::after {
+.menu-link.active::after {
   background-color: var(--line-border-color);
 }
 
@@ -451,9 +451,12 @@ ul {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
 }
+.footer-indent {
+  margin-right: 120px;
+}
+
 .logo-container {
   display: inline-block;
   margin-bottom: 16px;
@@ -687,10 +690,16 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: var(--modal-btn-hero);
+  fill: var(--modal-icon);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   cursor: pointer;
+}
+.modal-btn-hero:hover,
+.modal-btn-hero:focus {
+  background-color: var(--modal-icon-hover-backraund);
+  fill: var(--white-color);
 }
